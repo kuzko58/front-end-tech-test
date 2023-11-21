@@ -1,13 +1,21 @@
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
-const TelegramIcon = () => {
+type TelegramIconProps = {
+    className?: string;
+};
+
+const TelegramIcon = ({ className = '' }: TelegramIconProps) => {
+    const transitionClasses =
+        'transform transition-all ease-in-out duration-300';
+
     return (
         <svg
             width="34"
             height="34"
             viewBox="0 0 34 34"
-            fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className={twMerge(`${transitionClasses} fill-none`, className)}
         >
             <circle cx="17" cy="17" r="16" stroke="white" strokeWidth="2" />
             <path

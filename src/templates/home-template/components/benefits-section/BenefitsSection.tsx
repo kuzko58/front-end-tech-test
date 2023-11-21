@@ -14,13 +14,13 @@ const BenefitsSection = () => {
         <section className="w-full flex min-h-[100dvh] bg-black py-20 relative order-6 xl:order-5">
             <div className="xl:hidden h-full w-full bg-[url(/images/home/market-image.webp)] bg-center bg-no-repeat bg-cover absolute top-0" />
             <PaddedWrapper className="w-full flex justify-center">
-                <div className="w-full max-w-app-w z-10 pb-[100px] xl:pb-2">
+                <div className="w-full max-w-app-w z-0 pb-[100px] xl:pb-2">
                     <div className="hidden xl:flex gap-6">
                         {benefitsCardData.map((data, index) => (
                             <BenefitsCard key={index} {...data} />
                         ))}
                     </div>
-                    <div className="xl:hidden w-screen overflow-x-auto scrollbar-hide">
+                    <div className="xl:hidden w-[calc(100vw-10px)] md:w-[calc(100vw-65px)] overflow-x-auto scrollbar-hide border-2">
                         <div className="flex gap-3">
                             {benefitsCardDataLG.map((data, index) => (
                                 <BenefitsCard key={index} {...data} />

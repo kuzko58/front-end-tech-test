@@ -18,9 +18,9 @@ const Footer = () => {
                             © Creon {currentYear}. All rights reserved.
                         </p>
                         <div className="flex gap-4">
-                            <TelegramIcon />
-                            <DiscordIcon />
-                            <TwitterIcon />
+                            <TelegramIcon className="fill-[rgb(59,130,246,0)] hover:fill-[rgba(59,130,246,1)] cursor-pointer" />
+                            <DiscordIcon className="fill-[rgb(59,130,246,0)] hover:fill-[rgba(59,130,246,1)] cursor-pointer" />
+                            <TwitterIcon className="fill-[rgb(59,130,246,0)] hover:fill-[rgba(59,130,246,1)] cursor-pointer" />
                         </div>
                     </div>
                     <FooterLogo />
