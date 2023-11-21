@@ -11,7 +11,7 @@ import {
 
 const BenefitsSection = () => {
     return (
-        <section className="w-full flex min-h-[100dvh] bg-black py-20 relative order-6 xl:order-5">
+        <section className="w-full flex min-h-[100vh] bg-black py-20 relative order-6 xl:order-5">
             <div className="xl:hidden h-full w-full bg-[url(/images/home/market-image.webp)] bg-center bg-no-repeat bg-cover absolute top-0" />
             <PaddedWrapper className="w-full flex justify-center">
                 <div className="w-full max-w-app-w z-0 pb-[100px] xl:pb-2">

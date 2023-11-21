@@ -17,7 +17,7 @@ import { ourVisionAccordionData } from '../../constants/our-vision-data';
 
 const OurVisionSection = () => {
     return (
-        <section className="w-full flex min-h-[100dvh] bg-black py-20 order-2 xl:order-4">
+        <section className="w-full flex min-h-[100vh] bg-black py-20 order-2 xl:order-4">
             <PaddedWrapper className="w-full flex justify-center">
                 <div className="w-full flex flex-col lg:flex-row gap-0 md:gap-14 max-w-app-w z-10">
                     <div className="w-full lg:w-1/2 flex flex-col">
