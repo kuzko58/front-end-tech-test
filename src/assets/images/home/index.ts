@@ -1,7 +1,7 @@
 import creonPassNftImage from './creon-pass-nft.webp';
 import profitingThroughImageXL from './profiting-through-xl.webp';
 import profitingThroughImageMD from './profiting-through-md.webp';
-import ourVisionImage from './our-vision.webp';
+import ourMissionImage from './our-mission.webp';
 import benefitsTokenImage from './benefits-token.webp';
 import benefitsTokenImageLG from './benefits-token-lg.webp';
 import benefitsRevenueImage from './benefits-revenue.webp';
@@ -16,7 +16,7 @@ export {
     creonPassNftImage,
     profitingThroughImageXL,
     profitingThroughImageMD,
-    ourVisionImage,
+    ourMissionImage,
     benefitsTokenImage,
     benefitsTokenImageLG,
     benefitsRevenueImage,

@@ -10,7 +10,7 @@ import { creonPassNftImage } from '@/assets/images/home';
 
 const CreonPassSection = () => {
     return (
-        <section className="w-full flex min-h-[100vh] bg-black py-20 order-5 xl:order-2">
+        <section className="w-full flex min-h-[100vh] bg-black py-10">
             <PaddedWrapper className="w-full flex justify-center">
                 <div className="w-full flex flex-col md:flex-row gap-6 max-w-app-w">
                     <div className="w-full md:w-1/2 flex flex-col gap-10">

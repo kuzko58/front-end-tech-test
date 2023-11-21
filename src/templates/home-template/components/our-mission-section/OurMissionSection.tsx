@@ -5,24 +5,22 @@ import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
 import PaddedWrapper from '@/components/wrappers/PaddedWrapper';
 import Heading3 from '@/components/typography/Heading3';
-import Accordion, {
-    AccordionBtnProps,
-} from '@/components/accordions/Accordion';
 import Heading4 from '@/components/typography/Heading4';
 import UpCaret from '@/components/icons/UpCaret';
 import DownCaret from '@/components/icons/DownCaret';
 import BodyText from '@/components/typography/BodyText';
-import { ourVisionImage } from '@/assets/images/home';
-import { ourVisionAccordionData } from '../../constants/our-vision-data';
+import { ourMissionImage } from '@/assets/images/home';
+import { ourMissionAccordionData } from '../../constants/our-mission-data';
+import { useOurMission } from './use-our-mission';
 
-const OurVisionSection = () => {
+const OurMissionSection = () => {
     return (
-        <section className="w-full flex min-h-[100vh] bg-black py-20 order-2 xl:order-4">
+        <section className="w-full flex flex-col min-h-[100vh] bg-black py-10">
             <PaddedWrapper className="w-full flex justify-center">
                 <div className="w-full flex flex-col lg:flex-row gap-0 md:gap-14 max-w-app-w z-10">
                     <div className="w-full lg:w-1/2 flex flex-col">
                         <Heading3 className="hidden xl:block max-w-[699px]">
-                            Our vision is to support the innovation of AI
+                            Our mission is to support the innovation of AI
                             blockchain projects{' '}
                             <span className="gradient text-gradient">
                                 while prioritizing communities and democratizing
@@ -44,28 +42,7 @@ const OurVisionSection = () => {
                         />
                     </div>
                     <div className="w-full lg:w-1/2 flex">
-                        <ul className="w-full flex flex-col">
-                            {ourVisionAccordionData.map((data, index) => (
-                                <li
-                                    key={index}
-                                    className="px-2 py-4 border-[#13171D] border-b-[1px]"
-                                >
-                                    <Accordion
-                                        Button={(props) => (
-                                            <AccordionButton
-                                                {...props}
-                                                Icon={data.Icon}
-                                            />
-                                        )}
-                                        title={data.title}
-                                    >
-                                        <BodyText className="pl-[130px]">
-                                            {data.content}
-                                        </BodyText>
-                                    </Accordion>
-                                </li>
-                            ))}
-                        </ul>
+                        <Accordion />
                         <ImageBox
                             wrapperClass="h-[377px] ml-[-20%] mt-auto mb-[-100px] hidden md:block lg:hidden"
                             innerBoxClass="right-[calc(0vw-150px)]"
@@ -78,9 +55,11 @@ const OurVisionSection = () => {
     );
 };
 
-export default OurVisionSection;
+export default OurMissionSection;
 
-type AccordionButtonProps = AccordionBtnProps & {
+type AccordionButtonProps = {
+    title: string;
+    open: boolean;
     Icon: React.FC<{ active?: boolean }>;
 };
 
@@ -101,6 +80,44 @@ const AccordionButton = ({ open, title, Icon }: AccordionButtonProps) => {
                 <DownCaret className="group-hover:stroke-blue-500" />
             )}
         </div>
+    );
+};
+
+const Accordion = () => {
+    const transitionClasses =
+        'transition-all ease-in-out duration-200 transform origin-top';
+
+    const { activeAccordion, handleToggleAccordion } = useOurMission();
+
+    return (
+        <ul
+            className={`${transitionClasses} w-full h-fit flex flex-col justify-center`}
+        >
+            {ourMissionAccordionData.map((data, index) => (
+                <li
+                    key={index}
+                    className="px-2 py-4 border-[#13171D] border-b-[1px]"
+                    onClick={() => handleToggleAccordion(index)}
+                >
+                    <AccordionButton
+                        title={data.title}
+                        open={index === activeAccordion}
+                        Icon={data.Icon}
+                    />
+                    <div
+                        className={`${transitionClasses} overflow-hidden  ${
+                            index === activeAccordion
+                                ? 'max-h-[1000px] opacity-100'
+                                : 'max-h-0 opacity-0'
+                        }`}
+                    >
+                        <BodyText className="pl-[100px] xl:pl-[130px]">
+                            {data.content}
+                        </BodyText>
+                    </div>
+                </li>
+            ))}
+        </ul>
     );
 };
 
@@ -125,7 +142,7 @@ const ImageBox = ({
             <div className={twMerge('absolute ', innerBoxClass)}>
                 <div className={twMerge('relative', imageContainer)}>
                     <Image
-                        src={ourVisionImage.src}
+                        src={ourMissionImage.src}
                         fill
                         alt=""
                         style={{ objectFit: 'cover' }}

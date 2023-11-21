@@ -12,7 +12,7 @@ import BodyText from '@/components/typography/BodyText';
 
 const ProfitingThroughSection = () => {
     return (
-        <section className="w-full flex min-h-[100vh] bg-black py-20 order-3">
+        <section className="w-full flex min-h-[100vh] bg-black py-10">
             <PaddedWrapper className="w-full flex justify-center">
                 <div className="w-full flex flex-col gap-4 max-w-app-w">
                     <Heading2>Profiting Through</Heading2>

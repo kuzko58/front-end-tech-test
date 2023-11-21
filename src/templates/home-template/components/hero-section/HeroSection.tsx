@@ -5,7 +5,7 @@ import Heading4 from '@/components/typography/Heading4';
 
 const HeroSection = () => {
     return (
-        <section className="w-full flex min-h-[100dvh] bg-[url(/images/home/hero-image.webp)] bg-center bg-no-repeat bg-cover relative order-1">
+        <section className="w-full flex min-h-[100dvh] bg-[url(/images/home/hero-image.webp)] bg-center bg-no-repeat bg-cover relative">
             <div className="w-full flex-1 bg-[linear-gradient(0deg,_rgba(5,12,26,1)_0%,_rgba(58,132,239,1)_40%,_rgba(176,32,255,1)_100%)] mix-blend-soft-light" />
             <PaddedWrapper className="flex flex-col items-center w-full h-full absolute top-0">
                 <div className="max-w-app-w w-full h-full flex flex-col justify-end pb-[114px]">
