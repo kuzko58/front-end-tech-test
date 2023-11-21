@@ -6,7 +6,7 @@ type LaunchIconProps = {
 
 const LaunchIcon = ({ active }: LaunchIconProps) => {
     const transitionClasses =
-        'transform transition-all ease-in-out duration-200';
+        'transform transition-all ease-in-out duration-300';
 
     return (
         <svg

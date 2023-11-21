@@ -25,9 +25,9 @@ const CreonPassSection = () => {
                         <div className="w-full md:hidden h-[485px] relative">
                             <Image
                                 src={creonPassNftImage.src}
-                                layout="fill"
-                                objectFit="cover"
+                                fill
                                 alt=""
+                                style={{ objectFit: 'cover' }}
                             />
                         </div>
                         <ContentVariant1 />
@@ -41,9 +41,9 @@ const CreonPassSection = () => {
                     <div className="w-full hidden md:flex flex-1 h-[694px] xl:h-[808px] md:w-1/2 relative">
                         <Image
                             src={creonPassNftImage.src}
-                            layout="fill"
-                            objectFit="cover"
+                            fill
                             alt=""
+                            style={{ objectFit: 'cover' }}
                         />
                     </div>
                 </div>

@@ -8,7 +8,7 @@ import { marketCardData } from '../../constants/market-data';
 const MarketSection = () => {
     return (
         <section className="w-full flex min-h-[100dvh] relative bg-black order-4 xl:order-6">
-            <div className="hidden xl:block h-full w-full bg-[url(/images/home/market-image.svg)] bg-center bg-no-repeat bg-cover absolute top-0" />
+            <div className="hidden xl:block h-full w-full bg-[url(/images/home/market-image.webp)] bg-center bg-no-repeat bg-cover absolute top-0" />
             <PaddedWrapper className="flex flex-col items-center w-full z-10">
                 <div className="w-screen md:w-full max-w-app-w  overflow-x-auto scrollbar-hide xl:pb-[150px]">
                     <div className="w-full flex md:flex-col gap-6">
@@ -38,7 +38,7 @@ const MarketCard = ({ title, content, image }: MarketCardProps) => {
                 <BodyText>{content}</BodyText>
             </div>
             <div className="relative w-full md:w-1/3 h-[160px] md:h-auto">
-                <Image src={image} layout="fill" objectFit="cover" alt="" />
+                <Image src={image} fill alt="" style={{ objectFit: 'cover' }} />
             </div>
         </div>
     );

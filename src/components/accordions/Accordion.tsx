@@ -22,6 +22,9 @@ const Accordion: React.FC<AccordionProps> = ({
 }) => {
     const [isOpen, setIsOpen] = useState(false);
 
+    const transitionClasses =
+        'transform transition-all ease-in-out duration-300';
+
     const toggleAccordion = () => {
         setIsOpen(!isOpen);
     };
@@ -35,7 +38,7 @@ const Accordion: React.FC<AccordionProps> = ({
                 <Button title={title} open={isOpen} />
             </div>
             <div
-                className={`transform transition-all ease-in-out duration-200 overflow-hidden  ${
+                className={`${transitionClasses} overflow-hidden  ${
                     isOpen ? 'max-h-[1000px]' : 'max-h-0'
                 }`}
             >

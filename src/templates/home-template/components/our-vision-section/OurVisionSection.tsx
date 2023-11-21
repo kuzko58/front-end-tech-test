@@ -126,9 +126,9 @@ const ImageBox = ({
                 <div className={twMerge('relative', imageContainer)}>
                     <Image
                         src={ourVisionImage.src}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
                         alt=""
+                        style={{ objectFit: 'cover' }}
                     />
                 </div>
             </div>

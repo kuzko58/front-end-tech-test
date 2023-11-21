@@ -12,7 +12,7 @@ import {
 const BenefitsSection = () => {
     return (
         <section className="w-full flex min-h-[100dvh] bg-black py-20 relative order-6 xl:order-5">
-            <div className="xl:hidden h-full w-full bg-[url(/images/home/market-image.svg)] bg-center bg-no-repeat bg-cover absolute top-0" />
+            <div className="xl:hidden h-full w-full bg-[url(/images/home/market-image.webp)] bg-center bg-no-repeat bg-cover absolute top-0" />
             <PaddedWrapper className="w-full flex justify-center">
                 <div className="w-full max-w-app-w z-10 pb-[100px] xl:pb-2">
                     <div className="hidden xl:flex gap-6">
@@ -48,6 +48,9 @@ const BenefitsCard = ({
     image,
     content,
 }: BenefitsCardProps) => {
+    const transitionClasses =
+        'transform transition-all ease-in-out duration-300';
+
     return (
         <div className="w-full min-w-[308px] flex flex-col gap-3 xl:gap-6 bg-[rgba(19,23,29,0.60)] rounded-md h-[616px] xl:h-[659px] py-[20px] xl:py-[30px]">
             <div className="w-full flex flex-col gap-1 xl:gap-2 px-[30px] min-h-[90px] xl:min-h-[120px]">
@@ -57,8 +60,17 @@ const BenefitsCard = ({
                 </Heading4>
             </div>
             <div className="w-full pr-[20px] xl:pr-[30px]">
-                <div className="relative overflow-hidden rounded-e-md h-[234px] ">
-                    <Image src={image} layout="fill" objectFit="cover" alt="" />
+                <div className="overflow-hidden rounded-e-md h-[234px]">
+                    <div
+                        className={`${transitionClasses} relative w-full h-full hover:scale-[1.1]`}
+                    >
+                        <Image
+                            src={image}
+                            fill
+                            alt=""
+                            style={{ objectFit: 'cover' }}
+                        />
+                    </div>
                 </div>
             </div>
             <BodyText className="px-[20px] xl:px-[30px]">{content}</BodyText>

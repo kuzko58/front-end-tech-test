@@ -61,12 +61,12 @@ const ContentXL = () => {
 const ContentMD = () => {
     return (
         <div className="xl:hidden flex flex-col lg:flex-row w-full gap-6 py-6">
-            <div className="w-full lg:w-3/5 h-[176px] md:h-[362px] lg:h-[493px] relative">
+            <div className="w-full lg:w-3/5 h-[176px] sm:h-[262px] md:h-[362px] lg:h-[493px] relative">
                 <Image
                     src={profitingThroughImageMD.src}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
                     alt=""
+                    style={{ objectFit: 'cover' }}
                 />
             </div>
             <div className="w-full lg:w-2/5 flex flex-col gap-6 items-center justify-center py-2 lg:px-6 border-[#13171D] border-b-[1px] border-t-[1px] lg:border-t-0 lg:border-b-0 lg:border-l-[1px] lg:border-r-[1px]">

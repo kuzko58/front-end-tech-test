@@ -1,16 +1,16 @@
-import creonPassNftImage from './creon-pass-nft.svg';
-import profitingThroughImageXL from './profiting-through-xl.svg';
-import profitingThroughImageMD from './profiting-through-md.svg';
-import ourVisionImage from './our-vision.svg';
-import benefitsTokenImage from './benefits-token.svg';
-import benefitsTokenImageLG from './benefits-token-lg.svg';
-import benefitsRevenueImage from './benefits-revenue.svg';
-import benefitsIncomeImageLG from './benefits-income-lg.svg';
-import benefitsLaunchpadImage from './benefits-launchpad.svg';
-import benefitsLaunchpadImageLG from './benefits-launchpad-lg.svg';
-import marketAIProspectsImage from './market-ai-prospects.svg';
-import marketAIToolsImage from './market-ai-tools.svg';
-import marketAICryptoImage from './market-ai-crypto.svg';
+import creonPassNftImage from './creon-pass-nft.webp';
+import profitingThroughImageXL from './profiting-through-xl.webp';
+import profitingThroughImageMD from './profiting-through-md.webp';
+import ourVisionImage from './our-vision.webp';
+import benefitsTokenImage from './benefits-token.webp';
+import benefitsTokenImageLG from './benefits-token-lg.webp';
+import benefitsRevenueImage from './benefits-revenue.webp';
+import benefitsIncomeImageLG from './benefits-income-lg.webp';
+import benefitsLaunchpadImage from './benefits-launchpad.webp';
+import benefitsLaunchpadImageLG from './benefits-launchpad-lg.webp';
+import marketAIProspectsImage from './market-ai-prospects.webp';
+import marketAIToolsImage from './market-ai-tools.webp';
+import marketAICryptoImage from './market-ai-crypto.webp';
 
 export {
     creonPassNftImage,
