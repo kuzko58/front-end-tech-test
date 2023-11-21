@@ -21,7 +21,7 @@ const BenefitsSection = () => {
                         ))}
                     </div>
                     <div className="xl:hidden w-[calc(100vw-30px)] md:w-[calc(100vw-65px)] overflow-x-auto scrollbar-hide">
-                        <div className="flex gap-3">
+                        <div className="flex gap-4">
                             {benefitsCardDataLG.map((data, index) => (
                                 <BenefitsCard key={index} {...data} />
                             ))}

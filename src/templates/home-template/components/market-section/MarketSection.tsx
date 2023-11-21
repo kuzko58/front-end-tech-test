@@ -11,7 +11,7 @@ const MarketSection = () => {
             <div className="hidden xl:block h-full w-full bg-[url(/images/home/market-image.webp)] bg-center bg-no-repeat bg-cover absolute top-0" />
             <PaddedWrapper className="flex flex-col items-center w-full z-0">
                 <div className="w-[calc(100vw-30px)] md:w-full max-w-app-w overflow-x-auto scrollbar-hide xl:pb-[150px]">
-                    <div className="w-full flex md:flex-col gap-6">
+                    <div className="w-full flex md:flex-col gap-4 xl:gap-6">
                         {marketCardData.map((data, index) => (
                             <MarketCard key={index} {...data} />
                         ))}

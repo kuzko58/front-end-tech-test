@@ -85,7 +85,7 @@ const AccordionButton = ({ open, title, Icon }: AccordionButtonProps) => {
 
 const Accordion = () => {
     const transitionClasses =
-        'transition-all ease-in-out duration-200 transform origin-top';
+        'transition-all ease-in-out duration-300 transform origin-top';
 
     const { activeAccordion, handleToggleAccordion } = useOurMission();
 
@@ -107,8 +107,8 @@ const Accordion = () => {
                     <div
                         className={`${transitionClasses} overflow-hidden  ${
                             index === activeAccordion
-                                ? 'max-h-[1000px] opacity-100'
-                                : 'max-h-0 opacity-0'
+                                ? 'max-h-[1000px]'
+                                : 'max-h-0'
                         }`}
                     >
                         <BodyText className="pl-[100px] xl:pl-[130px]">
