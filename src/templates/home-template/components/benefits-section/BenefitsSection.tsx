@@ -21,7 +21,7 @@ const BenefitsSection = () => {
                         ))}
                     </div>
                     <div className="xl:hidden w-[calc(100vw-30px)] md:w-[calc(100vw-65px)] overflow-x-auto scrollbar-hide">
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 py-4">
                             {benefitsCardDataLG.map((data, index) => (
                                 <BenefitsCard key={index} {...data} />
                             ))}
@@ -40,6 +40,7 @@ type BenefitsCardProps = {
     subtitle: string;
     image: string;
     content: string;
+    isComingSoon?: boolean;
 };
 
 const BenefitsCard = ({
@@ -47,12 +48,20 @@ const BenefitsCard = ({
     subtitle,
     image,
     content,
+    isComingSoon,
 }: BenefitsCardProps) => {
     const transitionClasses =
         'transform transition-all ease-in-out duration-300';
 
     return (
-        <div className="w-full min-w-[308px] flex flex-col gap-3 xl:gap-6 bg-[rgba(19,23,29,0.60)] rounded-md h-[616px] xl:h-[659px] py-[20px] xl:py-[30px]">
+        <div className="w-full min-w-[308px] flex flex-col gap-3 xl:gap-6 bg-[rgba(19,23,29,0.60)] rounded-md h-[616px] xl:h-[659px] py-[20px] xl:py-[30px] relative">
+            {isComingSoon ? (
+                <span className="px-[6px] py-[3px] rounded-full text-xs leading-[13.2px] font-satoshi-bold uppercase bg-white absolute right-[5%] top-[-10px]">
+                    Coming soon
+                </span>
+            ) : (
+                ''
+            )}
             <div className="w-full flex flex-col gap-1 xl:gap-2 px-[30px] min-h-[90px] xl:min-h-[120px]">
                 <Heading3>{title}</Heading3>
                 <Heading4 className="gradient text-gradient">

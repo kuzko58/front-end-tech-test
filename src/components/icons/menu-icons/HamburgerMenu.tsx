@@ -16,7 +16,7 @@ const HamburgerMenu = ({
     isOpen,
 }: HamburgerMenuProps) => {
     const barClasses =
-        'transform origin-center transition-all ease-in-out duration-200';
+        'transform origin-center transition-all ease-in-out duration-300';
 
     return (
         <svg

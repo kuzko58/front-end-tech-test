@@ -24,7 +24,11 @@ const NavigationItems = () => {
                         className="cursor-pointer xl:hidden"
                         onClick={toggleMenu}
                     >
-                        <HamburgerMenu isOpen={isOpen} />
+                        <HamburgerMenu
+                            isOpen={isOpen}
+                            svgClass={isOpen ? 'bg-blue-500' : ''}
+                            barColor={isOpen ? '#fff' : '#000'}
+                        />
                     </div>
                 </div>
             </div>
