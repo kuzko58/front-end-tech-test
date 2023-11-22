@@ -50,7 +50,7 @@ const SideMenu = ({ isOpen }: SideMenuProps) => {
 
     return (
         <div
-            className={`${transformClasses} xl:hidden absolute top-0 right-0 z-[-1] w-full h-screen flex justify-end overflow-hidden ${
+            className={`${transformClasses} xl:hidden absolute top-0 right-0 z-[-1] w-full h-[100dvh] flex justify-end overflow-hidden ${
                 isOpen
                     ? 'bg-[rgba(0,0,0,0.5)]'
                     : 'bg-[rgba(0,0,0,0)] invisible pointer-events-none'
