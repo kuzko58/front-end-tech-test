@@ -6,6 +6,7 @@ import { useNavigationItems } from './use-navigation-items';
 import HeaderLinks from './components/HeaderLinks';
 import ConnectButton from './components/ConnectButton';
 import SocialMediaBox from '../../../components/SocialMediaBox';
+import ClickAway from '@/components/utils/ClickAway';
 
 const NavigationItems = () => {
     const { isOpen, toggleMenu } = useNavigationItems();
@@ -35,7 +36,7 @@ const NavigationItems = () => {
                 </div>
             </div>
 
-            <SideMenu isOpen={isOpen} />
+            <SideMenu isOpen={isOpen} toggleMenu={toggleMenu} />
         </div>
     );
 };
@@ -44,9 +45,10 @@ export default NavigationItems;
 
 type SideMenuProps = {
     isOpen: boolean;
+    toggleMenu: () => void;
 };
 
-const SideMenu = ({ isOpen }: SideMenuProps) => {
+const SideMenu = ({ isOpen, toggleMenu }: SideMenuProps) => {
     const transformClasses =
         'transform transition-all ease-in-out duration-300';
 
@@ -58,14 +60,16 @@ const SideMenu = ({ isOpen }: SideMenuProps) => {
                     : 'bg-[rgba(0,0,0,0)] invisible pointer-events-none'
             }`}
         >
-            <div
+            <ClickAway
                 className={`${transformClasses} h-full w-52 bg-black pt-24 pb-8 pl-7 md:pl-4 flex flex-col justify-between ${
                     isOpen ? 'translate-x-0' : 'translate-x-[100%]'
                 }`}
+                isOpen={isOpen}
+                onClose={toggleMenu}
             >
                 <HeaderLinks />
                 <SocialMediaBox />
-            </div>
+            </ClickAway>
         </div>
     );
 };
