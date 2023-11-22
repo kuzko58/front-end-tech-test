@@ -5,9 +5,7 @@ import HamburgerMenu from '@/components/icons/menu-icons/HamburgerMenu';
 import { useNavigationItems } from './use-navigation-items';
 import HeaderLinks from './components/HeaderLinks';
 import ConnectButton from './components/ConnectButton';
-import TelegramIcon from '@/components/icons/TelegramIcon';
-import DiscordIcon from '@/components/icons/DiscordIcon';
-import TwitterIcon from '@/components/icons/TwitterIcon';
+import SocialMediaBox from '../../../components/SocialMediaBox';
 
 const NavigationItems = () => {
     const { isOpen, toggleMenu } = useNavigationItems();
@@ -26,8 +24,12 @@ const NavigationItems = () => {
                     >
                         <HamburgerMenu
                             isOpen={isOpen}
-                            svgClass={isOpen ? 'bg-blue-500' : ''}
-                            barColor={isOpen ? '#fff' : '#000'}
+                            svgClass={`group hover:bg-blue-500 ${
+                                isOpen ? 'bg-blue-500' : ''
+                            }`}
+                            barClasses={`group-hover:stroke-white ${
+                                isOpen ? 'stroke-white' : ''
+                            }`}
                         />
                     </div>
                 </div>
@@ -62,11 +64,7 @@ const SideMenu = ({ isOpen }: SideMenuProps) => {
                 }`}
             >
                 <HeaderLinks />
-                <div className="flex gap-4">
-                    <TelegramIcon />
-                    <DiscordIcon />
-                    <TwitterIcon />
-                </div>
+                <SocialMediaBox />
             </div>
         </div>
     );

@@ -1,9 +1,7 @@
 import React from 'react';
-import DiscordIcon from '@/components/icons/DiscordIcon';
 import FooterLogo from '@/components/icons/FooterLogo';
-import TelegramIcon from '@/components/icons/TelegramIcon';
-import TwitterIcon from '@/components/icons/TwitterIcon';
 import PaddedWrapper from '@/components/wrappers/PaddedWrapper';
+import SocialMediaBox from '../components/SocialMediaBox';
 
 const Footer = () => {
     const currentDate = new Date();
@@ -17,11 +15,7 @@ const Footer = () => {
                         <p className="text-white">
                             © Creon {currentYear}. All rights reserved.
                         </p>
-                        <div className="flex gap-4">
-                            <TelegramIcon className="fill-[rgb(59,130,246,0)] hover:fill-[rgba(59,130,246,1)] cursor-pointer" />
-                            <DiscordIcon className="fill-[rgb(59,130,246,0)] hover:fill-[rgba(59,130,246,1)] cursor-pointer" />
-                            <TwitterIcon className="fill-[rgb(59,130,246,0)] hover:fill-[rgba(59,130,246,1)] cursor-pointer" />
-                        </div>
+                        <SocialMediaBox />
                     </div>
                     <FooterLogo />
                 </div>
