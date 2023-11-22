@@ -1,4 +1,6 @@
-import React, { useId } from 'react';
+'use client';
+
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 type TwitterIconProps = {
@@ -10,7 +12,7 @@ const TwitterIcon = ({
     className = '',
     circleClass = '',
 }: TwitterIconProps) => {
-    const clipId = useId();
+    const clipId = crypto.randomUUID();
     const transitionClasses =
         'transform origin-center transition-all ease-in-out duration-300';
 

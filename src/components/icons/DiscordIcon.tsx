@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useId } from 'react';
 import { twMerge } from 'tailwind-merge';
 
@@ -10,7 +12,7 @@ const DiscordIcon = ({
     className = '',
     circleClass = '',
 }: DiscordIconProps) => {
-    const clipId = useId();
+    const clipId = crypto.randomUUID();
     const transitionClasses =
         'transform origin-center transition-all ease-in-out duration-300';
 
