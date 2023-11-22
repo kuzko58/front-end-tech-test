@@ -1,5 +1,3 @@
-'use client';
-
 import { twMerge } from 'tailwind-merge';
 import { useEffect } from 'react';
 
@@ -15,7 +13,7 @@ const ClickAway = ({
     onClose,
     className = '',
 }: ClickAwayProps) => {
-    const id = window.crypto.randomUUID();
+    const id = crypto.randomUUID();
 
     useEffect(() => {
         const handleClickOutside = (event: Event) => {
