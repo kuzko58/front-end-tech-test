@@ -33,7 +33,7 @@ const ContentXL = () => {
                 <VideoAnimation src="/videos/home/profit-video.mp4" />
                 <VideoOverlay />
             </div>
-            <div className="w-1/3 flex flex-col gap-6 items-center justify-center py-2 px-6 border-l-[1px] border-r-[1px] border-[#13171D]">
+            <div className="w-1/3 flex flex-col gap-4 items-center justify-center py-2 px-6 border-l-[1px] border-r-[1px] border-[#13171D]">
                 <Heading4>
                     The dynamic community driven business model of the future.
                 </Heading4>
@@ -57,7 +57,7 @@ const ContentMD = () => {
             <div className="w-full lg:w-3/5 h-[176px] sm:h-[262px] md:h-[362px] lg:h-[493px] relative rounded-md overflow-hidden">
                 <VideoAnimation src="/videos/home/profit-video.mp4" />
             </div>
-            <div className="w-full lg:w-2/5 flex flex-col gap-6 items-center justify-center py-4 lg:px-6 border-[#13171D] border-b-[1px] border-t-[1px] lg:border-t-0 lg:border-b-0 lg:border-l-[1px] lg:border-r-[1px]">
+            <div className="w-full lg:w-2/5 flex flex-col gap-4 items-center justify-center py-6 lg:px-6 border-[#13171D] border-b-[1px] border-t-[1px] lg:border-t-0 lg:border-b-0 lg:border-l-[1px] lg:border-r-[1px]">
                 <Heading4 className="text-left w-full">
                     A Dynamic Business Model for Sustainable Growth and
                     Community Engagement
