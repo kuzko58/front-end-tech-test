@@ -21,10 +21,9 @@ const config: Config = {
                 ],
             },
             colors: {
-                mc: {
-                    DEFAULT: '#EF8023',
-                    dark: '#FF6D00',
-                },
+                primary: '#3d8bff',
+                secondary: '#ab23ff',
+                tertiary: '#13171d',
             },
             padding: {
                 'app-x': '15px',

@@ -12,13 +12,13 @@ body {
 
 /* Track */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background-color: #ab23ff;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 /* Handle on hover */
