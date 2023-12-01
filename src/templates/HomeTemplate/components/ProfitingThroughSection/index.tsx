@@ -53,7 +53,7 @@ const ContentXL = () => {
 
 const ContentMD = () => {
     return (
-        <div className="xl:hidden flex flex-col lg:flex-row w-full gap-6 py-6">
+        <div className="xl:hidden flex flex-col lg:flex-row w-full gap-8 py-6">
             <div className="w-full lg:w-3/5 h-[176px] sm:h-[262px] md:h-[362px] lg:h-[493px] relative rounded-md overflow-hidden">
                 <VideoAnimation src="/videos/home/profit-video.mp4" />
             </div>
