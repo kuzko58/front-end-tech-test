@@ -64,7 +64,7 @@ const BenefitsCard = ({
             )}
             <div className="w-full flex flex-col gap-2 xl:gap-4 px-[30px] min-h-[90px] xl:min-h-[120px]">
                 <Heading3>{title}</Heading3>
-                <Heading4 className="gradient text-gradient xl:w-3/4">
+                <Heading4 className="gradient text-gradient">
                     {subtitle}
                 </Heading4>
             </div>

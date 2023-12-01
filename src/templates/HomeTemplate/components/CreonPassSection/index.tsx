@@ -17,7 +17,7 @@ const CreonPassSection = () => {
             <PaddedWrapper className="w-full flex justify-center">
                 <div className="w-full flex flex-col items-center md:flex-row gap-6 max-w-app-w">
                     <div className="w-full md:w-1/2 flex flex-col gap-6">
-                        <Heading2 className="border-b-[1px] border-b-[#13171D] py-6">
+                        <Heading2 className="border-b-[1px] border-b-tertiary py-6">
                             creon pass nft
                         </Heading2>
                         <Heading4 className="gradient text-gradient">
@@ -66,7 +66,7 @@ const ContentText = ({ children, className = '' }: ContentTextProps) => {
     return (
         <BodyText
             className={twMerge(
-                'px-4 py-2 border-[1px] border-[#13171D] w-fit rounded-md',
+                'px-4 py-2 border-[1px] border-tertiary w-fit rounded-md',
                 className,
             )}
         >

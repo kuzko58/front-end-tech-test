@@ -32,6 +32,9 @@ const config: Config = {
             maxWidth: {
                 'app-w': '1440px',
             },
+            transitionProperty: {
+                'max-height': 'max-height',
+            },
         },
     },
     plugins: [],

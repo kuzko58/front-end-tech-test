@@ -115,7 +115,7 @@ const Accordion = () => {
             {ourMissionAccordionData.map((data, index) => (
                 <li
                     key={index}
-                    className="px-2 py-2 xl:py-4 border-[#13171D] border-b-[1px]"
+                    className="px-2 py-2 xl:py-4 border-tertiary border-b-[1px]"
                     onClick={() => handleToggleAccordion(index)}
                 >
                     <AccordionButton
@@ -126,11 +126,17 @@ const Accordion = () => {
                     <div
                         className={`${transitionClasses} overflow-hidden  ${
                             index === activeAccordion
-                                ? 'max-h-[1000px]'
-                                : 'max-h-0'
+                                ? 'h-[280px] xl:h-[200px]'
+                                : 'h-[1px]'
                         }`}
                     >
-                        <BodyText className="pl-[100px] xl:pl-[130px]">
+                        <BodyText
+                            className={`${transitionClasses} pl-[100px] xl:pl-[130px] ${
+                                index === activeAccordion
+                                    ? 'opacity-100'
+                                    : 'opacity-50'
+                            }`}
+                        >
                             {data.content}
                         </BodyText>
                     </div>

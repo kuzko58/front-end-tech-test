@@ -8,9 +8,9 @@ const HeaderLinks = () => {
             {headerNavigationItems.map((navigationItem, index) => (
                 <li
                     key={index}
-                    className={`text-white xl:text-lg font-satoshi-bold flex gap-1 py-6 xl:py-0 border-b-[1px] border-b-[#13171D] xl:border-b-0 ${
+                    className={`text-white xl:text-lg font-satoshi-bold flex gap-1 py-6 xl:py-0 border-b-[1px] border-b-tertiary xl:border-b-0 ${
                         index === 0
-                            ? 'border-t-[1px] border-t-[#13171D] xl:border-t-0'
+                            ? 'border-t-[1px] border-t-tertiary xl:border-t-0'
                             : ''
                     }`}
                 >
