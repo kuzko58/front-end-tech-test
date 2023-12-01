@@ -6,6 +6,7 @@ import PaddedWrapper from '@/components/wrappers/PaddedWrapper';
 import Heading4 from '@/components/typography/Heading4';
 import BodyText from '@/components/typography/BodyText';
 import VideoAnimation from '@/components/videos/VideoAnimation';
+import VideoOverlay from '../components/VideoOverlay';
 
 const CreonPassSection = () => {
     const transitionClasses =
@@ -15,7 +16,7 @@ const CreonPassSection = () => {
         <section className="w-full flex min-h-[100vh] bg-black py-10">
             <PaddedWrapper className="w-full flex justify-center">
                 <div className="w-full flex flex-col items-center md:flex-row gap-6 max-w-app-w">
-                    <div className="w-full md:w-1/2 flex flex-col gap-10">
+                    <div className="w-full md:w-1/2 flex flex-col gap-6">
                         <Heading2 className="border-b-[1px] border-b-[#13171D] py-6">
                             creon pass nft
                         </Heading2>
@@ -25,7 +26,7 @@ const CreonPassSection = () => {
                             passive income through AI-driven tools
                         </Heading4>
                         <div className="w-full md:hidden h-[485px] relative">
-                            <VideoAnimation src="/videos/home/NFT.mp4" />
+                            <NFT />
                         </div>
                         <ContentVariant1 />
                         <ContentVariant2 />
@@ -47,7 +48,7 @@ const CreonPassSection = () => {
                         </Link>
                     </div>
                     <div className="w-full hidden md:flex flex-1 h-[694px] xl:h-[808px] md:w-1/2 relative rounded-md overflow-hidden">
-                        <VideoAnimation src="/videos/home/NFT.mp4" />
+                        <NFT />
                     </div>
                 </div>
             </PaddedWrapper>
@@ -112,5 +113,23 @@ const ContentVariant2 = () => {
                 </ContentText>
             </div>
         </div>
+    );
+};
+
+const NFT = () => {
+    return (
+        <>
+            <div className="relative w-full h-full overflow-hidden">
+                <VideoAnimation
+                    src="/videos/home/NFT.mp4"
+                    className="mix-blend-soft opacity-80"
+                />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] h-[13%] filter blur-[12px] xl:blur-[18px]  bg-black shrink-0" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[300%] h-[13%] filter blur-[12px] xl:blur-[18px] bg-black shrink-0" />
+                <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[13%] h-[300%] filter blur-[12px] bg-black shrink-0" />
+                <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-[13%] h-[300%] filter blur-[12px] bg-black shrink-0" />
+            </div>
+            <VideoOverlay />
+        </>
     );
 };

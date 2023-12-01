@@ -5,6 +5,7 @@ import Heading3 from '@/components/typography/Heading3';
 import Heading4 from '@/components/typography/Heading4';
 import BodyText from '@/components/typography/BodyText';
 import VideoAnimation from '@/components/videos/VideoAnimation';
+import VideoOverlay from '../components/VideoOverlay';
 
 const ProfitingThroughSection = () => {
     return (
@@ -29,13 +30,8 @@ const ContentXL = () => {
     return (
         <div className="hidden xl:flex w-full gap-10 py-6">
             <div className="w-2/3 relative rounded-md overflow-hidden">
-                {/* <Image
-                    src={profitingThroughImageXL.src}
-                    width={947}
-                    height={485}
-                    alt=""
-                /> */}
                 <VideoAnimation src="/videos/home/profit-video.mp4" />
+                <VideoOverlay />
             </div>
             <div className="w-1/3 flex flex-col gap-6 items-center justify-center py-2 px-6 border-l-[1px] border-r-[1px] border-[#13171D]">
                 <Heading4>

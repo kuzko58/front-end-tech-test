@@ -68,7 +68,7 @@ const AccordionButton = ({ open, title, Icon }: AccordionButtonProps) => {
     const transitionClasses = 'transition-all ease-in duration-200';
 
     return (
-        <div className="w-full flex items-center gap-6 justify-between cursor-pointer py-4 group">
+        <div className="w-full flex items-center gap-6 justify-between cursor-pointer py-2 xl:py-4 group">
             <div className="w-full flex items-center gap-6">
                 <div className="w-[73px] h-[83px] min-w-[73px]  xl:w-[100px] xl:h-[114px] xl:min-w-[100px]">
                     <Icon active={open} />
@@ -81,7 +81,7 @@ const AccordionButton = ({ open, title, Icon }: AccordionButtonProps) => {
                     >
                         {title}
                     </Heading4>
-                    <div className="p-2">
+                    <div className="p-1 xl:p-2">
                         {open ? (
                             <UpCaret
                                 className={
@@ -115,7 +115,7 @@ const Accordion = () => {
             {ourMissionAccordionData.map((data, index) => (
                 <li
                     key={index}
-                    className="px-2 py-4 border-[#13171D] border-b-[1px]"
+                    className="px-2 py-2 xl:py-4 border-[#13171D] border-b-[1px]"
                     onClick={() => handleToggleAccordion(index)}
                 >
                     <AccordionButton
